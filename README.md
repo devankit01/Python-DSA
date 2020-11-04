@@ -6,3 +6,5 @@
 ### Array
 ### List
 ### Recursion
+### Dictionary
+### Tuple
