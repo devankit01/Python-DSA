@@ -8,6 +8,8 @@ class SLinkedList:
     def __init__(self):
         self.head = None
 
+    # Addition of Elements
+
     def ADD(self, data):
         newNode = Node(data)
         if self.head is None:
@@ -73,6 +75,7 @@ class SLinkedList:
                 newNode.ref = n.ref
                 n.ref = newNode
 
+#  Traverse Elements
     def traverse(self):
         if self.head is None:
             print("LL is Empty")
@@ -82,6 +85,46 @@ class SLinkedList:
                 print(n.data, "=>", end=" ")
                 n = n.ref
 
+# Delete Elements
+    def DELETE_START(self):
+        if self.head is None:
+            print('LL is Empty')
+        else:
+            n = self.head
+            self.head = n.ref
+
+# Delete at the End
+    def DELETE_END(self):
+        if self.head is None:
+            print('LL is Empty')
+        else:
+            n = self.head
+            while n.ref.ref is not None:
+                n = n.ref
+            n.ref = None
+
+#  Delete the Element
+    def DELETE(self, x):
+        if self.head is None:
+            print('LL is EMpty')
+            return
+        if x == self.head.data:
+            self.head = self.head.ref
+        else:
+            n = self.head
+            while n.ref is not None:
+                if n.ref.data == x:
+                    break
+                n = n.ref
+            if n.ref is None:
+                print('Node is NOt Present')
+            else:
+                n.ref = n.ref.ref
+
+
+
+
+
 
 LL1 = SLinkedList()
 
@@ -90,13 +133,12 @@ LL1.ADD_AT_END(20)
 LL1.ADD_AT_END(30)
 LL1.ADD_AT_END(40)
 LL1.ADD_AT_END(50)
-# LL1.ADD_BEFORE_ELEMENT(10,30)
-# LL1.ADD_AFTER_ELEMENT(40,20)
-
-LL1.ADD(60)
 
 
 print(LL1.traverse())
+LL1.DELETE(20)
+print(LL1.traverse())
+
 '''
 node1 = Node(1)
 print(node1) # Output : <__main__.Node object at 0x0000023B55B4C5C8>
