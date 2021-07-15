@@ -1,5 +1,5 @@
 ''' Binary  Search '''
-''' Note : Only works if arrat is sorted '''
+''' Note : Only works if array is sorted '''
 
 import math
 def BinarySearch(array, value):
