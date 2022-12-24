@@ -1,8 +1,6 @@
 # Python-DSA
 
 
-## Topics Available
-
 1. Array
 2. List
 3. Recursion
