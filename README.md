@@ -7,3 +7,5 @@
 4. Dictionary
 5. Tuple
 6. Singly Linked List
+7. Searching
+8. Stack
